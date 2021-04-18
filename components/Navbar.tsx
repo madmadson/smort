@@ -20,7 +20,7 @@ export default function Navbar() {
       <ul>
         <li>
           <Link href="/">
-            <button className="btn-logo">NXT</button>
+            <button className="btn-logo">smort</button>
           </Link>
         </li>
 
@@ -31,13 +31,8 @@ export default function Navbar() {
               <button onClick={signOut}>Sign Out</button>
             </li>
             <li>
-              <Link href="/admin">
-                <button className="btn-blue">Write Posts</button>
-              </Link>
-            </li>
-            <li>
               <Link href={`/${username}`}>
-                <img src={user?.photoURL || '/hacker.png'} />
+                <img src={user?.photoURL || '/defaultAvatar.png'} />
               </Link>
             </li>
           </>
@@ -46,7 +41,7 @@ export default function Navbar() {
         {/* user is not signed OR has not created username */}
         {!username && (
           <li>
-            <Link href="/enter">
+            <Link href="/login">
               <button className="btn-blue">Log in</button>
             </Link>
           </li>
